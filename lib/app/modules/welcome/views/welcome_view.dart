@@ -4,7 +4,6 @@ import 'package:bgc/app/const/space.dart';
 import 'package:bgc/app/global_widgets/boutons.dart';
 import 'package:bgc/app/routes/app_pages.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 
 import '../controllers/welcome_controller.dart';
@@ -13,10 +12,6 @@ class WelcomeView extends GetView<WelcomeController> {
   const WelcomeView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
-      systemNavigationBarColor: Colors.transparent,
-      statusBarColor: Colors.transparent,
-    ));
     return Scaffold(
       body: Container(
         decoration: const BoxDecoration(
@@ -46,7 +41,7 @@ class WelcomeView extends GetView<WelcomeController> {
                     textColor: AppColors.blue,
                     backgroundColor: AppColors.white,
                     onPressed: () {
-                      Get.toNamed(Routes.WELCOME);
+                      Get.toNamed(Routes.NEW_ACCOUNT);
                     },
                   ),
                   AppButton(
@@ -54,7 +49,7 @@ class WelcomeView extends GetView<WelcomeController> {
                     textColor: AppColors.white,
                     backgroundColor: AppColors.blue,
                     onPressed: () {
-                      Get.toNamed(Routes.WELCOME);
+                      Get.toNamed(Routes.LOGIN);
                     },
                   ),
                 ],

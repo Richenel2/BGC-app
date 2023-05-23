@@ -26,6 +26,7 @@ class AppButton extends StatelessWidget {
       ),
       onPressed: onPressed,
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           SizedBox(
             width: 30,
@@ -36,7 +37,9 @@ class AppButton extends StatelessWidget {
           ),
           Text(
             text,
-            style: TextStyle(color: textColor),
+            style: TextStyle(
+              color: textColor,
+            ),
           ),
           const SizedBox(
             width: 30,
@@ -70,22 +73,25 @@ class OpenPainter extends CustomPainter {
 }
 
 class CustomBackButton extends StatelessWidget {
-  const CustomBackButton({super.key});
+  final Color? color;
+  const CustomBackButton({super.key, this.color});
 
   @override
   Widget build(BuildContext context) {
     return IconButton(
+      constraints: const BoxConstraints(minWidth: 50),
       onPressed: Get.back,
-      icon: Flexible(
-        child: Row(
-          children: const [
-            Icon(Icons.arrow_back),
-            Text(
-              " -",
-              style: TextStyle(color: Colors.black),
-            )
-          ],
-        ),
+      icon: Row(
+        children: [
+          Icon(
+            Icons.arrow_back,
+            color: color,
+          ),
+          Text(
+            "-",
+            style: TextStyle(color: color, fontWeight: FontWeight.w900),
+          )
+        ],
       ),
     );
   }
