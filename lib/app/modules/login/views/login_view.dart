@@ -115,7 +115,7 @@ class LoginView extends GetView<LoginController> {
                     textColor: AppColors.white,
                     backgroundColor: AppColors.black,
                     onPressed: () {
-                      Get.toNamed(Routes.HOME);
+                      Get.toNamed(Routes.VERFICATION_CODE);
                     },
                   ),
                   SizedBox(

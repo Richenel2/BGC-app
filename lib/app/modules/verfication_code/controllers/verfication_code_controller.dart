@@ -4,6 +4,7 @@ class VerficationCodeController extends GetxController {
   //TODO: Implement VerficationCodeController
 
   final count = 0.obs;
+  final passcode = "".obs;
   @override
   void onInit() {
     super.onInit();

@@ -17,15 +17,7 @@ class ForgetPasswordView extends GetView<ForgetPasswordController> {
         backgroundColor: Colors.transparent,
         elevation: 0,
         leading: const CustomBackButton(color: AppColors.white),
-        // title: const Text(
-        //   'Verification du Code',
-        //   style: TextStyle(
-        //     color: AppColors.whiteWithOpacity,
-        //     fontWeight: FontWeight.w300,
-        //     fontSize: 14,
-        //   ),
-        // ),
-        // centerTitle: true,
+
       ),
       body: Padding(
         padding: EdgeInsets.all(AppSpace.screenPadding),
